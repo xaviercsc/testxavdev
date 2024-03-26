@@ -5,6 +5,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository
+                    sh 'cd /home'
                     sh 'rm -r testxavdevflr'
                     sh 'mkdir testxavdevflr'
                     sh 'cd testxavdevflr'
