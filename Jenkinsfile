@@ -5,6 +5,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository
+                    sh 'rm -r testxavdevflr'
                     sh 'mkdir testxavdevflr'
                     sh 'cd testxavdevflr'
                     sh 'git clone "https://github.com/xaviercsc/testxavdev.git" '
