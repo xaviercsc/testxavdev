@@ -9,7 +9,9 @@ pipeline {
                     sh 'rm -r testxavdevflr'
                     sh 'mkdir testxavdevflr'
                     sh 'cd testxavdevflr'
+                    sh 'rm -r testxavdev'
                     sh 'git clone "https://github.com/xaviercsc/testxavdev.git" '
+                    sh 'rm -r testxavdev'
                     sh 'cd testxavdev'
                     // Execute the shell script commands
                     sh 'touch new-file.txt'
