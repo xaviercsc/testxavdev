@@ -8,7 +8,7 @@ pipeline {
                     sh 'mkdir testxavdevflr'
                     sh 'cd testxavdevflr'
                     sh 'git clone "https://github.com/xaviercsc/testxavdev.git" '
-                    
+                    sh 'cd testxavdev'
                     // Execute the shell script commands
                     sh 'touch new-file.txt'
                     sh 'ls -ahl > new-file.txt'
