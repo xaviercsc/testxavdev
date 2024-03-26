@@ -5,7 +5,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository
-                    git url: 'https://github.com/xaviercsc/testxavdev.git'
+                    sh 'git clone "https://github.com/xaviercsc/testxavdev.git" '
                     
                     // Execute the shell script commands
                     sh 'touch new-file.txt'
