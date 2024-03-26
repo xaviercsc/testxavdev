@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Example') {
+        stage('Execute Shell Script') {
             steps {
-                sh 'echo "Hello, this is a message in the Jenkins console log"'
+                sh './test1.sh'
             }
         }
     }
