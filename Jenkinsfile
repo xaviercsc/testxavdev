@@ -14,7 +14,9 @@ pipeline {
                     // Execute the shell script commands
                     sh 'touch new-file.txt'
                     sh 'ls -ahl > new-file.txt'
-                    
+                    //config
+                    git config --global user.email "test@abc.xyz"
+                    git config --global user.name "abc xyz"
                     // Commit and push the changes
                     sh 'git add .'
                     sh 'git commit -m "Adding new-file.txt and updating with ls -ahl output"'
