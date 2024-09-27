@@ -4,7 +4,7 @@
 git clone https://github.com/your-username/your-repository.git
 cd your-repository
 
-# Create a new file
+# Create a new file....
 touch new-file.txt
 
 # Echo the output of ls -ahl to the file
