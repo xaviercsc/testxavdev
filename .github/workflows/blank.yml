@@ -1,0 +1,27 @@
+name: Check Alignment with Master
+ 
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+ 
+jobs:
+  check-alignment:
+    runs-on: ubuntu-latest
+ 
+    steps:
+    - name: Checkout master branch
+      uses: actions/checkout@v2
+      with:
+        ref: master  # Change to 'main' if your default branch is named 'main'
+ 
+    - name: Checkout pull request branch
+      uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+ 
+    - name: Check if branch is up-to-date with master
+      run: |
+        git fetch origin master
+        git diff origin/master..HEAD --quiet || (echo "Branch is not up-to-date with master" && exit 1)
